@@ -7,16 +7,16 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
 import com.codeborne.selenide.Condition;
 
-public class SearchTests {
+public class GithubTest {
     @BeforeAll
-    static void BeforeALL() {
+    static void beforeALL() {
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
         Configuration.baseUrl = "https://github.com";
     }
 
     @Test
-    void FillFormTest() {
+    void searchTextJunit5() {
         open("/selenide/selenide");
         $("span[data-content='Wiki']").click();
         $(byText("Soft assertions")).click();
